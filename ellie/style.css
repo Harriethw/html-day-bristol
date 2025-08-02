@@ -1,0 +1,80 @@
+* {
+  image-rendering: pixelated;
+}
+html {
+  background-image: linear-gradient(lime, darkgreen);
+  min-height: 100vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.animal {
+  margin-bottom: -12px;
+}
+.animal::after {
+  content: 'shoo me away!';
+  display: block;
+  height: 0;
+  transform: translate(200px, -20px) rotate(45deg);
+  color: rgba(0, 0, 0, 0.63);
+}
+.animal:hover::after {
+  opacity: 0;
+}
+.animal:hover img {
+  transform: translateX(100vw);
+  transition: transform 2s steps(20);
+}
+.screen-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signpost {
+  border-left: 1rem black double;
+  height: 80svh;
+  min-height: 500px;
+}
+.sign {
+  border: 10px black solid;
+  border-radius: 3rem;
+  padding: 10px;
+  font-family: monospace;
+  width: 60%;
+  background-color: white;
+}
+.sign > * {
+  display: block;
+  margin: auto;
+  width: min-content;
+  text-align: center;
+}
+.big-number {
+  font-size: 6rem;
+  border: 0.8rem red solid;
+  border-radius: 100%;
+}
+.small-number {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.aside {
+  margin-bottom: -5rem;
+  align-self: flex-end;
+  max-width: 40ch;
+  background: white linear-gradient(white, lightgreen);
+  border-radius: 10px;
+  padding: 5px;
+}
+.aside > p {
+  font-size: 1.1em;
+}
+.return {
+  text-decoration: underline;
+  color: blue;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+}

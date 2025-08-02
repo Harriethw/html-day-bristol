@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'SpaceNotoriousRounded';
+    src: url('SpaceNotoriousRounded.woff2') format('woff2'), url('SpaceNotoriousRounded.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parasitype';
+    src: url('Parasitype-Regular.woff2') format('woff2'), url('Parasitype-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    font-family: 'SpaceNotoriousRounded';
+    background-image: url("BUILD265.png");
+    background-size: 250px;
+    color: lightyellow;
+    text-shadow: black 1px 1px 1px, black -1px -1px 1px, black 2px 2px 2px, black -2px -2px 2px;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    padding-left: 1em;
+}
+
+.table img {
+    display: block;
+    width: 30vw;
+    position: fixed;
+    left: 35vw;
+    top: 20vh;
+    margin: 0;
+    z-index: -2;
+}
+
+#overheard {
+    z-index: 5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    header h1 {
+        font-family: 'Parasitype';
+    }
+
+main, footer {
+  max-width: 90vw;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+.canopy {
+    position: fixed;
+    width: 50%;
+    display: block;
+    z-index: -1;
+}
+
+#leaves {
+    right:0;
+    top:0;
+}
+
+#leaves2 {
+    left: 0;
+    top: 0;
+}
+
+#phrases p {
+    animation-name: fadeinout;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#phrases p:nth-child(even) {
+    text-align: right;
+}
+
+    #phrases p:nth-child(2n) {
+        animation-delay: 5s;
+    }
+
+    #phrases p:nth-child(3n) {
+        animation-delay: 3s;
+    }
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+#bird1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#bird2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@keyframes fadeinout {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1025px) {
+    main, footer {
+        max-width: 70vw;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .gallery img {
+        max-width: 30vw;
+    }
+}
