@@ -48,3 +48,11 @@ aside {
   border-radius: 25em;
   width: fit-content;
 }
+
+footer {
+  max-width: 70%;
+}
+
+#html-energy-webring {
+  margin: 2em;
+}
